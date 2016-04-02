@@ -93,4 +93,11 @@ public class Player : Token {
 			break;
 		}
 	}
+
+	public override void Vanish(){
+		for(int i=0;i<32;i++){
+			Particle.Add (X,Y);
+		}
+		base.Vanish ();
+	}
 }

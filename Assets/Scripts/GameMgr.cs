@@ -6,8 +6,9 @@ public class GameMgr : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Wall.parent = new TokenMgr<Wall> ("Wall", 128);
-
 		FloorMove.parent = new TokenMgr<FloorMove> ("FloorMove",32);
+		Particle.parent = new TokenMgr<Particle> ("Particle",32);
+		Spike.parent = new TokenMgr<Spike> ("Spike",32);
 
 		FieldMgr field = new FieldMgr ();
 		field.Load (1);
