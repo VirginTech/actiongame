@@ -3,6 +3,20 @@ using System.Collections;
 
 public class Player : Token {
 
+	public enum eGameState{
+		None,
+		StageClear,
+		GameOver,
+	}
+	eGameState _gameState=eGameState.None;
+
+	public void SetGameState(eGameState s){
+		_gameState = s;
+	}
+	public eGameState GetGameState(){
+		return _gameState;
+	}
+
 	bool _bFacingLeft=false;
 	enum eState{
 		Idle,

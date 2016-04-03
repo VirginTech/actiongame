@@ -16,6 +16,7 @@ public class Spike : Token {
 		string name = LayerMask.LayerToName (other.gameObject.layer);
 		if(name=="Player"){
 			Player p = other.gameObject.GetComponent<Player> ();
+			p.SetGameState (Player.eGameState.GameOver);
 			p.Vanish ();
 		}
 	}
